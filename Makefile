@@ -1,4 +1,4 @@
-all: sym-zshrc sym-aliases sym-functions sym-zsh-theme
+all: sym-zshrc sym-aliases sym-functions sym-zsh-theme sym-gitconfig
 	@echo "Finish symlinks"
 
 sym-zshrc:
@@ -12,3 +12,6 @@ sym-functions:
 
 sym-zsh-theme:
 	@if [ -f ~/.rpfernando.zsh-theme ]; then echo ".rpfernando.zsh-theme exists... moving on"; else ls -s rpfernando.zsh-theme ~/.oh-my-zsh/custom/themes/.rpfernando.zsh-theme; echo "functions symlinked"; fi
+
+sym-gitconfig:
+	@if [ -f ~/.gitconfig ]; then echo ".gitconfig exists... moving on"; else ls -s gitconfig ~/.gitconfig; echo "gitconfig symlinked"; fi
