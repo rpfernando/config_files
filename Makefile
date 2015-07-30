@@ -1,17 +1,24 @@
+CURR_PATH=`pwd`
+ZSHRC_DEST=~/.zshrc
+ALIASES_DEST=~/.aliases
+FUNCTIONS_DEST=~/.functions
+ZSH_THEME_DEST=~/.oh-my-zsh/custom/themes/rpfernando.zsh-theme
+GITCONFIG_DEST=~/.gitconfig
+
 all: sym-zshrc sym-aliases sym-functions sym-zsh-theme sym-gitconfig
 	@echo "Finish symlinks"
 
 sym-zshrc:
-	@if [ -f ~/.zshrc ]; then echo ".zshrc exists... moving on"; else ls -s zshrc ~/.zshrc; echo "zshrc symlinked"; fi
+	@if [ -f $(ZSHRC_DEST) ]; then echo ".zshrc exists... moving on"; else ln -s $(CURR_PATH)/zshrc $(ZSHRC_DEST); echo "zshrc symlinked"; fi
 
 sym-aliases:
-	@if [ -f ~/.aliases ]; then echo ".aliases exists... moving on"; else ls -s aliases ~/.aliases; echo "aliases symlinked"; fi
+	@if [ -f $(ALIASES_DEST) ]; then echo ".aliases exists... moving on"; else ln -s $(CURR_PATH)/aliases $(ALIASES_DEST); echo "aliases symlinked"; fi
 
 sym-functions:
-	@if [ -f ~/.functions ]; then echo ".functions exists... moving on"; else ls -s functions ~/.functions; echo "functions symlinked"; fi
+	@if [ -f $(FUNCTIONS_DEST) ]; then echo ".functions exists... moving on"; else ln -s $(CURR_PATH)/functions $(FUNCTIONS_DEST); echo "functions symlinked"; fi
 
 sym-zsh-theme:
-	@if [ -f ~/.rpfernando.zsh-theme ]; then echo ".rpfernando.zsh-theme exists... moving on"; else ls -s rpfernando.zsh-theme ~/.oh-my-zsh/custom/themes/.rpfernando.zsh-theme; echo "functions symlinked"; fi
+	@if [ -f $(ZSH_THEME_DEST) ]; then echo "rpfernando.zsh-theme exists... moving on"; else ln -s $(CURR_PATH)/rpfernando.zsh-theme $(ZSH_THEME_DEST); echo "rpfernando.zsh-theme symlinked"; fi
 
 sym-gitconfig:
-	@if [ -f ~/.gitconfig ]; then echo ".gitconfig exists... moving on"; else ls -s gitconfig ~/.gitconfig; echo "gitconfig symlinked"; fi
+	@if [ -f $(GITCONFIG_DEST) ]; then echo ".gitconfig exists... moving on"; else ln -s $(CURR_PATH)/gitconfig $(GITCONFIG_DEST); echo "gitconfig symlinked"; fi
