@@ -2,9 +2,7 @@
 alias jar="java -jar"
 # alias git="hub" find out hub autocompletition
 alias k="clear"
-alias csg-eng="ssh dev@csg-eng.ooyala.com"
-alias raspberrypi="ssh pi@10.12.1.88"
-alias macmini="ssh dev@gdl-macmini.gdl"
+
 # git
 alias gs="g status"
 alias gh="g hist"
@@ -14,17 +12,7 @@ alias last_sha="git log --pretty=tformat:'%H' -n 1|cat"
 # directories
 alias repos="~/Documents/repos/"
 alias r=repos
-alias iteso="~/Dropbox/iteso"
 
 #
-alias vag="/usr/bin/vagrant"
-alias vbrestart="sudo launchctl load /Library/LaunchDaemons/org.virtualbox.startup.plist"
+alias formatjson="python -m json.tool"
 
-
-#
-alias mongod="mongod --dbpath /usr/local/Cellar/mongodb/data"
-
-
-
-#
-# alias jk = say "you're fuking awsome"

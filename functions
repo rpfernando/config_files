@@ -13,12 +13,6 @@ function update_brew_cask() {
     brew cask cleanup
 }
 
-# Update gems
-function update_gems() {
-    gem update --system
-    gem update
-}
-
 # Update OSX and brew
 function update() {
     echo "$fg[yellow]Find Apple software updates$reset_color"
@@ -27,8 +21,6 @@ function update() {
     update_brew
     echo "$fg[yellow]Update brew cask and its packages$reset_color"
     update_brew_cask
-    echo "$fg[yellow]Update gems$reset_color"
-    update_gems
 }
 
 # Create a new directory and cd into it
@@ -53,10 +45,6 @@ function gccr {
     echo "Removed $1"
 }
 
-function psgmsn {
-    curl --data "$1 <img src=$2></img>" http://vault.alanorozco.com/anarchy/\?pinshits
-}
-
 function gshpsh {
     echo "\e[93mgit stash\e[0m"
     g stash
@@ -66,27 +54,5 @@ function gshpsh {
     echo ""
     echo "\e[93mgit stash pop\e[0m"
     g stash pop
-}
-
-# Java settings
-alias j6='ju 1.6'
-alias j7='ju 1.7'
-
-function jls() {
-    echo "Use ´j6 and j7´ to conventiently switch between Java versions."
-    echo "For a specific version use ´ju <version>´ where available versions are listed below:"
-    /usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d" | cut -d , -f 1 | colrm 1 4 | grep -v Home
-}
-
-function ju() {
-    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
-    export PATH=$JAVA_HOME/bin:$PATH
-    java -version
-}
-
-# Run IMA Test
-fuction rit() {
-    make-dbg third_party_player_dev/test_GoogleIMAAdsManagerModule 
-    run-air third_party_player_dev/test_GoogleIMAAdsManagerModule
 }
 

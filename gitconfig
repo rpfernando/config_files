@@ -1,14 +1,11 @@
 [user]
 	name = Fernando Padilla
-	email = rpfernando@ooyala.com
 [credential]
 	helper = osxkeychain
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-[hub]
-	protocol = https
 [push]
 	default = simple
 [core]
