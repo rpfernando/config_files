@@ -28,3 +28,5 @@
 	sh = stash
 [branch]
 	autosetuprebase = always
+[merge]
+    ff = false
