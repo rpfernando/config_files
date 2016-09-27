@@ -1,7 +1,5 @@
 [user]
 	name = Fernando Padilla
-[credential]
-	helper = osxkeychain
 [filter "media"]
 	required = true
 	clean = git media clean %f
