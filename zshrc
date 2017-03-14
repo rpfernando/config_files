@@ -15,6 +15,3 @@ source ~/.aliases
 
 export PATH="/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/usr/local/git/bin:/usr/local/go/bin"
 
-# ruby with rbenv
-eval "$(rbenv init -)"
-
