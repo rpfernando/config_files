@@ -1,5 +1,6 @@
 [user]
 	name = Fernando Padilla
+	email = ferpadillarubio@gmail.com
 [filter "media"]
 	required = true
 	clean = git media clean %f
