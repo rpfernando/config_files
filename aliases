@@ -16,3 +16,9 @@ alias r=repos
 
 #
 alias formatjson="python -m json.tool"
+
+# tmux
+alias ta='tmux attach -t'
+alias tls='tmux ls'
+alias td='tmux detach'
+alias tk='tmux kill-session'
