@@ -13,5 +13,3 @@ source $ZSH/oh-my-zsh.sh
 source ~/.functions
 source ~/.aliases
 
-export PATH="/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/usr/local/git/bin:/usr/local/go/bin"
-
