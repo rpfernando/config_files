@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="rpfernando"
 
 # oh-my-zsh plugins
-plugins=(git gem brew brew-cask)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
