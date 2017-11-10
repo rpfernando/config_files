@@ -3,6 +3,7 @@ alias jar="java -jar"
 # alias git="hub" find out hub autocompletition
 alias k="clear"
 alias v="vim"
+alias :q="exit"
 
 # git
 alias gs="g status"
