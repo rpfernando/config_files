@@ -1,9 +1,9 @@
-local ret_status="%(?:%{$fg[green]%} ➜  :%{$fg[red]%} ➜  %s)"
+local ret_status="%(?:%{$fg[green]%}:%{$fg[red]%}%s)"
 # local ruby_status="%{$fg[blue]%}ruby:(%{$fg[red]%}$(rbenv version | sed -e "s/ (set.*$//")%{$fg[blue]%})"
 
 # To enable ruby_status change PROPMT
 # PROMPT='%{$fg[cyan]%}%c $ruby_status $(git_prompt_info)'$'\n''${ret_status}%{$reset_color%}'
-PROMPT='%{$fg[cyan]%}%c %{$(git_prompt_info)%}'$'\n''${ret_status}%{$reset_color%}'
+PROMPT='%{$fg[cyan]%}%~ %{$(git_prompt_info)%}'$'\n''%{$reset_color%}%m %DT%T${ret_status} ➜  %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$reset_color"
